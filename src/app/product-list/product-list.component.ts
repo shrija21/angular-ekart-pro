@@ -6,7 +6,15 @@ import { Component } from '@angular/core';
   styleUrl: './product-list.component.css'
 })
 export class ProductListComponent {
-  name: string = 'iPhone 13';
-  price: number = 999;
-  color: string = 'Matt Black';
+  product = {
+    name: 'iPhone 13',
+    price: 999,
+    color: 'Matt Black',
+    discount: 8.5,
+    inStock: 5
+  }
+
+  getDiscountedPrice() {
+    return this.product.price - (this.product.price * this.product.discount / 100)
+  }
 }
