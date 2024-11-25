@@ -8,7 +8,7 @@
 <p>Discounted Price : {{ getDiscountedPrice().toFixed(2) }}</p>
 <p>{{ product.inStock > 0 ? 'Only ' + product.inStock + ' items left' : 'Not in Stock' }}</p>
 <button [disabled]="!(product.inStock > 0)">Buy Now</button>
-<input [value]="name" (input)="onNameChange()">
+<input (input)="onNameChange($event)">
 <br>
 <p>Name = {{ name }}</p>
 <br>

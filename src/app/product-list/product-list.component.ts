@@ -20,7 +20,7 @@ export class ProductListComponent {
     return this.product.price - (this.product.price * this.product.discount / 100)
   }
 
-  onNameChange() {
-    this.name = 'Mark';
+  onNameChange(event: any) {
+    this.name = event.target.value;
   }
 }
