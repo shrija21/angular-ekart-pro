@@ -19,4 +19,8 @@ export class ProductListComponent {
   getDiscountedPrice() {
     return this.product.price - (this.product.price * this.product.discount / 100)
   }
+
+  onNameChange() {
+    this.name = 'Mark';
+  }
 }
