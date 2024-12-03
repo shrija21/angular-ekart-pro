@@ -1,1 +1,7 @@
-<p>search works!</p>
+<div class="ekart--search--product">
+    <input class="ekart-search-product-input" [value]="searchText" (input)="updateSearchText($event)">
+    <button class="btn btn-search">Search</button>
+</div>
+<div class="ekart-search-result-for">
+    <p><strong>Search result for : </strong>{{ searchText }}</p>
+</div>
